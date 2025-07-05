@@ -1,0 +1,130 @@
+:root {
+  --bg: #f0f2f5;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --accent: #4a90e2;
+  --income: #2ecc71;
+  --expense: #e74c3c;
+  --input-bg: #fff;
+  --button-bg: var(--accent);
+  --button-text: #fff;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --card-bg: #2d2d2d;
+  --text-color: #f0f0f0;
+  --accent: #4a90e2;
+  --income: #27ae60;
+  --expense: #c0392b;
+  --input-bg: #444;
+  --button-bg: #444;
+  --button-text: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  background: var(--card-bg);
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.add-transaction, .transaction-list, .summary, .chart {
+  margin-bottom: 24px;
+}
+
+input, button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--accent);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border-left: 6px solid;
+  background: var(--input-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.plus {
+  border-color: var(--income);
+}
+
+.minus {
+  border-color: var(--expense);
+}
+
+li button {
+  background-color: var(--expense);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+h1, h3 {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.chart canvas {
+  max-width: 100%;
+}
+
+.toggle-btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 0 20px;
+  display: block;
+  width: 100%;
+}
